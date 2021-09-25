@@ -1,5 +1,5 @@
 @extends('layouts.dashboard')
-@section('profile_company','active')
+@section('profile_influencer','active')
 @section("title", "صفحتي الشخصية")
 @section("css")
 
@@ -38,7 +38,7 @@
     
                             </div>
                         
-                       <strong>{{$company_user_info->fname }} {{$company_user_info->lname }}
+                       <strong>{{$user->name }} 
                     
                         <div class="details">
                             <h5 class="mb-2"></h5>

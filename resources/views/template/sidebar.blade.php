@@ -13,20 +13,35 @@
             <div class="dropdown">
                 <strong> {{trans('lang.welcome')}}،
                 <a href="" class="">
-                {{auth()->user()->name}}</strong>
+      {{auth()->user()->name}}
+              
+            </strong>
                 </a>
             </div>
         </div>
         <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul id="main-menu" class="metismenu">
-                <li class="divider"></li>
-                <li class="@yield('profile')">
+                <li class="divider">
+                
+
+                </li>
+
+                @if(auth()->user()->role_id == 2)
+                <li class="@yield('profile_company')">
                     <a href="{{route('profile',['id'=>auth()->user()->id])}}"><i class="icon-user"></i><span>  الملف الشحصي </span></a>
                 </li>
 
                 <li class="@yield('influences')">
                     <a href="{{route('all_influencers')}}"><i class="icon-users"></i><span>  المؤثرين </span></a>
                 </li>
+                @endif
+@if(auth()->user()->role_id == 1)
+                <li class="@yield('profile_influencer')">
+                    <a href="{{route('profile_influencer',['id'=>auth()->user()->id])}}"><i class="icon-user"></i><span>  الملف الشحصي </span></a>
+                </li>
+
+@endif
+              
 
                 <li><a href="{{route('logout')}}"><i class="icon-power"></i>تسجيل الخروج</a></li>
             </ul>

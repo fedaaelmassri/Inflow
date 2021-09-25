@@ -37,6 +37,16 @@ Route::get('/cadWithAuth', function () {
 })->name('cadWithAuth');
 Route::get('/getLoginUrl', 'HomeController@getLoginUrl');
 Route::get('/login/google/callback', 'HomeController@youtubeCallback');
+
+
+
+Route::namespace('influencer')->prefix('/')->group(function (){
+   
+    Route::get('influencer/profile/{id}', 'InfluencerController@show_profile')->name('profile_influencer');
+
+});
+
+
 Route::namespace('Company')->prefix('/company')->group(function (){
     Route::get('/signup', 'CompanyController@index')->name('company-signup');
     Route::post('/addCompany', 'CompanyController@store')->name('company.store');
@@ -44,6 +54,9 @@ Route::namespace('Company')->prefix('/company')->group(function (){
     Route::get('influencers', 'CompanyController@all_influencers')->name('all_influencers');  
 
 });
+
+
+
 
 Route::get('logout', function () {
     Auth::logout();

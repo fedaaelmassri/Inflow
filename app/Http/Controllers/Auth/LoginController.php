@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use GuzzleHttp\Client;
 use Socialite;
 use App\User;
+use App\Influence;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -114,6 +115,12 @@ return Socialite::with('snapchat')->setConfig($config)->redirect();
 //     ]
 // ]);
 
+        // $influence_info = new Influence();
+        // $influence_info->user_id = $user_influencer->id;
+        // $influence_info->save();
+        // $user=User::find($user_influencer->id);
+        Auth::login($user_influencer);
+
 }
 public function snapchatProviderCallback(Request $request)
 {
@@ -130,6 +137,7 @@ public function snapchatProviderCallback(Request $request)
      
 $header = base64_encode($appId.":".$secret);
 $payloaded_url=$url."?client_id=".$appId."&client_secret=".$secret."&grant_type=authorization_code&redirect_uri=".$redirectUri."&code=".$code;//."&code_verifier=".$code_verifier; 
+    
 
 $ch = curl_init($payloaded_url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
