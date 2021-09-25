@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- 
+
 
 Route::post('/lang' , 'LangController\LangController@index')->middleware('lang')->name('langGange');
 Route::get('/change/en' , 'LangController\LangController@changeToEn')->middleware('lang')->name('langGange');
@@ -57,3 +57,6 @@ Route::get('login/instagram',
 Route::get('callback', 'Auth\LoginController@instagramProviderCallback')->name('instagram.login.callback');
 
 
+Route::get('/dash', function () {
+    return view('layouts.dashboard');
+})->name('dash');
