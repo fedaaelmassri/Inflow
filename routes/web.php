@@ -29,12 +29,12 @@ Route::get('/cadWithAuth', function () {
         'access_type'=>'offline',
         'include_granted_scopes' => 'true',
         'state'=>'state_parameter_passthrough_value',
-        'redirect_uri' => 'http://127.0.0.1:8000/login/google/callback',
+        'redirect_uri' => 'https://localhost/Inflow/public/login/google/callback',
         'response_type' => 'code',
         'scope' => 'https://www.googleapis.com/auth/youtube.readonly'
     ]);
     return redirect('https://accounts.google.com/o/oauth2/auth?'.$query);
-});
+})->name('cadWithAuth');
 Route::get('/getLoginUrl', 'HomeController@getLoginUrl');
 Route::get('/login/google/callback', 'HomeController@youtubeCallback');
 Route::namespace('Company')->prefix('/company')->group(function (){
@@ -50,5 +50,14 @@ Route::get('logout', function () {
     return redirect('/login');
 })->name('logout');
 
+
+Route::get('login/instagram',
+ 'Auth\LoginController@redirectToInstagramProvider')->name('instagram.login');
+
+Route::get('callback', 'Auth\LoginController@instagramProviderCallback')->name('instagram.login.callback');
+Route::get('login/snapchat',
+ 'Auth\LoginController@redirectToSnapchatProvider')->name('snapchat.login');
+
+Route::get('snapchat/callback', 'Auth\LoginController@snapchatProviderCallback')->name('snapchat.login.callback');
 
 

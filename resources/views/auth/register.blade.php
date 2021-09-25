@@ -128,7 +128,7 @@
         <div class="form-group col-md-2">                        
         </div>
         <div class="form-group col-md-4">             
-                <button class="btn btn-round btn-signin-social"><i class="fa fa-facebook-official facebook-color"></i> {{trans('lang.sign_up_facebook')}}</button>
+                <a href="{{route('snapchat.login')}}" class="btn btn-round btn-signin-social"><i class="fa fa-snapchat snapchat-color"></i> {{trans('lang.sign_up_facebook')}}</a>
             </div>
             <div class="form-group col-md-4">             
 
@@ -140,7 +140,7 @@
                 <div class="form-group col-md-2">                        
                 </div>
                 <div class="form-group col-md-4">   
-                <button class="btn btn-round btn-signin-social"><i class="fa  fa-instagram instagram-color"></i> {{trans('lang.sign_up_instagram')}}</button>
+                <a href="{{route('instagram.login')}}" class="btn btn-round btn-signin-social"><i class="fa  fa-instagram instagram-color"></i> {{trans('lang.sign_up_instagram')}}</a>
             </div>
             <div class="form-group col-md-4">   
             
@@ -153,7 +153,7 @@
                 client_id=client_id" target="_blank">
                     <button class="btn btn-success">Buka Youtube Channel</button>
                 </a> --}}
-                <a  href="{{ route('getLoginUrl') }}" class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</a>
+                <a  href="{{route('cadWithAuth')}}" class="btn btn-round btn-signin-social"><i class="fa  fa-youtube youtube-color"></i> {{trans('lang.sign_up_youtube')}}</a>
             </div>
         </div>
 
