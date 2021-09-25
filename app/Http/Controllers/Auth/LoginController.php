@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use GuzzleHttp\Client;
 use App\User;
+use App\Influence;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -104,7 +105,10 @@ class LoginController extends Controller
         // role_id = 1 => influencer account
         $user_influencer->save();
 
-    ;
+
+        // $influence_info = new Influence();
+        // $influence_info->user_id = $user_influencer->id;
+        // $influence_info->save();
         // $user=User::find($user_influencer->id);
         Auth::login($user_influencer);
 
@@ -112,9 +116,7 @@ class LoginController extends Controller
 
         return redirect(route('dash'));
      
-        // $data = $res->getBody()->getContents();
-        // $oAuthd = json_decode( $data );
-        // dd( $res );
+    
 
         // do your code here
     }
