@@ -1,0 +1,19 @@
+[33mf76384b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to f76384b
+[33m176916f[m HEAD@{1}: reset: moving to 176916f
+[33m176916f[m HEAD@{2}: reset: moving to 176916f
+[33mf76384b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{3}: pull origin main: Fast-forward
+[33m176916f[m HEAD@{4}: reset: moving to 176916f
+[33m0e00739[m HEAD@{5}: commit (merge): snapchat package install
+[33m7574c4e[m HEAD@{6}: commit: youtube package edited
+[33mc75bd8a[m HEAD@{7}: commit: youtube package
+[33mb0e6294[m HEAD@{8}: commit (merge): youtube package
+[33m14903d6[m HEAD@{9}: commit: youtube package
+[33m03c8862[m HEAD@{10}: commit: fixed auth design
+[33macb5b58[m HEAD@{11}: pull origin main: Fast-forward
+[33m993b647[m HEAD@{12}: commit: fixed style
+[33m56ec119[m HEAD@{13}: commit (merge): fixed merge
+[33m6ee7009[m HEAD@{14}: Branch: renamed refs/heads/main to refs/heads/main
+[33m6ee7009[m HEAD@{16}: commit: first commit
+[33m9ccc407[m[33m ([m[1;33mtag: base[m[33m, [m[1;32morigin[m[33m)[m HEAD@{17}: Branch: renamed refs/heads/main to refs/heads/main
+[33m9ccc407[m[33m ([m[1;33mtag: base[m[33m, [m[1;32morigin[m[33m)[m HEAD@{19}: Branch: renamed refs/heads/master to refs/heads/main
+[33m9ccc407[m[33m ([m[1;33mtag: base[m[33m, [m[1;32morigin[m[33m)[m HEAD@{21}: commit (initial): first commit
